@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+
+@mixin base_display{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin: 12rem auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.home {
+    @include base_display();
+
+    .entry{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+      width: 50%;
+      .header {
+          font-size: 5rem;
+          animation: color-change 10s infinite ease-in-out;
+      }
+
+      .line {
+        background-color: white;
+        width: 295px;
+        height: 2px;
+        transform: translateX(235px) translateY(-65px);
+        z-index: 1;
+      }
+  
+      .paragraph{
+          padding-top: 2rem;
+          color: white;
+          font-size: 1.7rem;
+      }
+      @keyframes color-change {
+          0% {
+              color: blue;
+            }
+            10% {
+              color: #8e44ad;
+            }
+            20% {
+              color: #1abc9c;
+            }
+            30% {
+              color: #d35400;
+            }
+            40% {
+              color: blue;
+            }
+            50% {
+              color: #34495e;
+            }
+            60% {
+              color: blue;
+            }
+            70% {
+              color: #2980b9;
+            }
+            80% {
+              color: #f1c40f;
+            }
+            90% {
+              color: #2980b9;
+            }
+            100% {
+              color: pink;
+            }
+      }
+    }
+}
+
+.display {
+    @include base_display();
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 100px;
+}
